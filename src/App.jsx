@@ -1,6 +1,7 @@
 import "./App.css";
 import LoginPage from "./components/LoginPage";
 import { LoginProvider } from "./context/LoginContext.jsx";
+import ForgotPasswordPage from "./components/ForgotPasswordPage.jsx";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <LoginProvider>
         <LoginPage />
       </LoginProvider>
+      <ForgotPasswordPage />
     </div>
   );
 }
