@@ -1,16 +1,16 @@
 import "./App.css";
 import LoginPage from "./components/LoginPage";
-import { LoginProvider } from "./context/LoginContext.jsx";
 import ForgotPasswordPage from "./components/ForgotPasswordPage.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <LoginProvider>
-        <LoginPage />
-      </LoginProvider>
-      <ForgotPasswordPage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/forgot" element={<ForgotPasswordPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
