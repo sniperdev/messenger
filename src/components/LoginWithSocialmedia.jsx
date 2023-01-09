@@ -1,10 +1,15 @@
 import SocialMedia from "./SocialMedia";
+
+
+
 const LoginWithSocialmedia = () => {
+
+
   return (
     <div className="text-center">
-      <SocialMedia provider="Google" />
-      <SocialMedia provider="Facebook" />
-      <SocialMedia provider="Github" />
+      <SocialMedia provider="google"/>
+      <SocialMedia provider="facebook" />
+      <SocialMedia provider="github" />
     </div>
   );
 };
