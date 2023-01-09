@@ -7,7 +7,7 @@ import { auth, facebook, github, google } from "../configs/firebase-cofig.jsx";
 
 
 const SocialMedia = ({ provider }) => {
-  const { signIn } = useContext(LoginContext);
+  const { signIn, setUser} = useContext(LoginContext);
 
   const loginWithSocials=async()=> {
     let loginProvider;
@@ -18,7 +18,8 @@ const SocialMedia = ({ provider }) => {
     }
     else loginProvider = github;
     await signInWithPopup(auth, loginProvider).then((result) => {
-      console.log(result.user);
+      let newUser = result.user;
+      setUser(newUser);
     });
   }
   return (
