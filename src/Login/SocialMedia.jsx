@@ -3,7 +3,6 @@ import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import LoginContext from "../context/LoginContext.jsx";
 import { signInWithPopup } from "firebase/auth";
 import { auth, facebook, github, google } from "../configs/firebase-cofig.jsx";
-import { Navigate } from "react-router-dom";
 
 const SocialMedia = ({ provider }) => {
   const { signIn, setUser } = useContext(LoginContext);
@@ -19,8 +18,8 @@ const SocialMedia = ({ provider }) => {
       let newUser = result.user;
       setUser(newUser);
     });
-    await Navigate({ to: "/app" });
   };
+
   return (
     <button
       className="w-full p-2 m-1 my-5 border rounded-lg border-black"
