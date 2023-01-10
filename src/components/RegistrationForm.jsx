@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import LoginContext from "../context/LoginContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 const RegistrationForm = () => {
+  const navigate = useNavigate();
   const { signIn, handleSubmitForm } = useContext(LoginContext);
   return (
     <form onSubmit={handleSubmitForm} className="my-4">
@@ -38,6 +40,12 @@ const RegistrationForm = () => {
           required
         />
       </label>
+      <a
+        className="text-sky-500 hover:underline hover:cursor-pointer"
+        onClick={() => navigate("/forgot")}
+      >
+        Forgot Password?
+      </a>
       <button
         type="submit"
         className="w-full rounded-lg bg-green-600 p-2 text-white text-lg my-3"
