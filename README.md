@@ -1,5 +1,5 @@
 # Messenger App
-It is simple chat app created with Vite, React + TailwindCSS, Database and Auth is in Supabase
+It is simple chat app created with Vite, React + TailwindCSS, Database and Auth is in Firebase
 
 ## Setup
 
