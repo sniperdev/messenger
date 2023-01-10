@@ -10,13 +10,13 @@ const LoginPage = () => {
       <div className="h-screen w-screen">
         <section className="flex flex-col p-3 h-full md:w-1/3 mx-auto 2xl:w-1/5">
           <h1 className="my-5 text-4xl text-center">
-            {signIn ? "Sign In" : "Sign up"}
+            {signIn ? "Sign Up" : "Sign In"}
           </h1>
           <LoginWithSocialmedia />
           <h2 className="text-center">
             {signIn
-              ? "or sign in with your email"
-              : "or sign up with your email"}
+              ? "or sign up with your email"
+              : "or sign in with your email"}
           </h2>
           <RegistrationForm />
           <CreateAccountButton />
