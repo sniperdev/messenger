@@ -1,10 +1,10 @@
 import React from "react";
-import AppHeader from "./AppHeader.jsx";
+import Header from "./Header.jsx";
 
 const MainApp = () => {
   return (
     <>
-      <AppHeader />
+      <Header />
     </>
   );
 };

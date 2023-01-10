@@ -1,9 +1,9 @@
 import "./App.css";
-import LoginPage from "./components/LoginPage";
-import ForgotPasswordPage from "./components/ForgotPasswordPage.jsx";
+import LoginPage from "./Login/LoginPage.jsx";
+import ForgotPasswordPage from "./ForgotPassword/ForgotPasswordPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoutes from "./configs/PrivateRoutes.jsx";
-import MainApp from "./components/MainApp.jsx";
+import MainApp from "./App/MainApp.jsx";
 
 function App() {
   return (

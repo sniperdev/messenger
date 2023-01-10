@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import LoginContext, { LoginProvider } from "../context/LoginContext";
+import LoginContext, { LoginProvider } from "../context/LoginContext.jsx";
 import LoginWithSocialmedia from "./LoginWithSocialmedia.jsx";
 import CreateAccountButton from "./CreateAccountButton.jsx";
 import RegistrationForm from "./RegistrationForm.jsx";
