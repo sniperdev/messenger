@@ -6,11 +6,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../configs/firebase-cofig.jsx";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginContext = createContext({});
 export const LoginProvider = ({ children }) => {
   const [signIn, setSignIn] = useState(true);
   const [user, setUser] = useState({});
+  const [userLogin, loading, error] = useAuthState(auth);
   async function SignUpWithEmail(name, email, password) {
     await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
@@ -49,6 +51,7 @@ export const LoginProvider = ({ children }) => {
         handleSubmitForm,
         setUser,
         user,
+        userLogin,
       }}
     >
       {children}
