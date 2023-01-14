@@ -3,9 +3,11 @@ import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import LoginContext from "../context/LoginContext.jsx";
 import { signInWithPopup } from "firebase/auth";
 import { auth, facebook, github, google } from "../configs/firebase-cofig.jsx";
+import { useNavigate } from "react-router-dom";
 
 const SocialMedia = ({ provider }) => {
-  const { signIn, setUser } = useContext(LoginContext);
+  const navigate = useNavigate();
+  const { signIn } = useContext(LoginContext);
 
   const loginWithSocials = async () => {
     let loginProvider;
@@ -14,9 +16,8 @@ const SocialMedia = ({ provider }) => {
     } else if (provider === "facebook") {
       loginProvider = facebook;
     } else loginProvider = github;
-    await signInWithPopup(auth, loginProvider).then((result) => {
-      let newUser = result.user;
-      setUser(newUser);
+    await signInWithPopup(auth, loginProvider).then(() => {
+      navigate("/app");
     });
   };
 
